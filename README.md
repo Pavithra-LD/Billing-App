@@ -1,2 +1,3 @@
 # Billing-App
-This app can be used to generate bill
+This app is developed using React.js
+
