@@ -41,7 +41,8 @@ const Customers=()=>{
                  <div class="mb-2">
                      <div class="row" >
                          <div class="col-md-12">
-                        <input style={{marginBottom:'20px'}}type="text" value={term} placeholder="Search by Name or Phone" onChange={handleChange}/>                       
+                        <input className="form-control"
+                                style={{width:"20rem",marginBottom:'10px',marginLeft:"40rem"}}type="text" value={term} placeholder="Search by Name or Phone" onChange={handleChange}/>                       
                         </div>
                      </div>
                  </div>

@@ -64,8 +64,9 @@ const Login=(props)=>{
                 <div class="card" style={{width: "18rem"}}>
 
             <div class="card-header" class="card text-white bg-secondary mb-3"><h3 style={{marginLeft:'30px'}}>Login</h3></div>
-            <form onSubmit={formik.handleSubmit} style={{marginLeft:'15px'}}>
+            <form onSubmit={formik.handleSubmit} style={{marginLeft:"15px"}}>
                 {serverError && <p style={{color:"red"}}>{serverError}</p>}
+                
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Email*</label> <br/>
                 <input
                 type="text"
@@ -73,8 +74,11 @@ const Login=(props)=>{
                 value={formik.values.username}
                 onChange={formik.handleChange}
                 placeholder="Enter email"
+                className="form-control"
+                style={{width:"16rem"}}
                 />{formik.touched.email ? <div style={{color:"red",fontSize:"14px",fontStyle:"italic"}}>{formik.errors.email}</div>:null}
-                <br/>
+                
+                
 
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Password*</label><br/>
                 <input style={{marginBottom:'5px'}}
@@ -83,9 +87,11 @@ const Login=(props)=>{
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 placeholder="Password"
-                />{formik.touched.password ? <div style={{color:"red",fontSize:"14px",fontStyle:"italic"}}>{formik.errors.password}</div>:null} <br/>   
+                className="form-control" 
+                style={{width:"16rem"}}            
+                />{formik.touched.password ? <div style={{color:"red",fontSize:"14px",fontStyle:"italic"}}>{formik.errors.password}</div>:null} <br/>
 
-                <button type="submit" style={{marginBottom:'20px'}}type="submit" class="btn btn-secondary">Login</button>
+                <button type="submit" style={{marginBottom:'20px'}}type="submit" class="btn btn-primary">Login</button>
             </form>
             </div>
             </div>

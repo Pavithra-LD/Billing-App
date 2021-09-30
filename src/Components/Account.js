@@ -14,6 +14,7 @@ import { startGetBilling } from '../Action/customerBillingAction'
 import ListingBill from '../Billing-Comp/ListingBill'
 import ViewBill from '../Billing-Comp/ViewBill'
 import PrivateRoute from '../PrivateRoute'
+import image from '../../src/images/images.jpg'
 
 
 const Account=(props)=>{
@@ -45,15 +46,17 @@ const Account=(props)=>{
 
     return(
         <div>
+
+            
             <h3>Welcome {account.username} !!</h3>
             <div class="mb-5">
             <div class="d-flex justify-content-around" style={{backgroundColor:"black"}}>
                 
                 
-                <Link to ="/account/dashboard">Dashboard</Link>
-                <Link to="/account/customers">Customers</Link>
-                <Link to="/account/products">Products</Link>
-                <Link to="/account/bills">Billings</Link>
+                <Link to ="/account/dashboard" style={{color:"white"}}>Dashboard</Link>
+                <Link to="/account/customers" style={{color:"white"}}>Customers</Link>
+                <Link to="/account/products" style={{color:"white"}}>Products</Link>
+                <Link to="/account/bills" style={{color:"white"}}>Billings</Link>
                                 
             </div>
             </div>
@@ -64,8 +67,9 @@ const Account=(props)=>{
             <PrivateRoute path="/account/bills" component={BillingContainer} exact={true}/>
             <PrivateRoute path="/account/bills/all" component={ListingBill}/>
             <PrivateRoute path="/account/bills/all/:id" component={ViewBill}/>
-
+        
         </div>
+        
         
     )
 }

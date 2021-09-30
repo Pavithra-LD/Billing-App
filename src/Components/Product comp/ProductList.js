@@ -27,7 +27,8 @@ const ProductList=(props)=>{
             
             <div class="row">
                 <div class="col-md-25">
-                <input value={term} onChange={handleChange} placeholder="Search product" style={{marginBottom:"10px"}}/>
+                <input className="form-control" style={{marginBottom:"10px",width:"15rem",marginLeft:"45rem"}}
+                    value={term} onChange={handleChange} placeholder="Search product" />
                 </div>
             </div>
 

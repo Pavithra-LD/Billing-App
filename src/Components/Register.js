@@ -72,19 +72,21 @@ const Register=(props)=>{
                     justifyContent: 'center',
                 }}>
 
-            <div class="card" style={{width: "18rem"}} >
+            <div class="card" style={{width: "20rem"}} >
             <div class="card-header" class="card text-white bg-secondary mb-3"><h3>Register here!</h3></div>
             
-            <form onSubmit={formik.handleSubmit} style={{marginLeft:'20px'}}>
+            <form onSubmit={formik.handleSubmit} style={{marginLeft:"15px"}}>
                 {servererror && <p style={{color:"red"}}>{servererror}</p>}
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Username</label><br/>
                 <input
                 type="text"
                 name="username"
+                className="form-control"
+                style={{width:"16rem"}}
                 value={formik.values.username}
                 onChange={formik.handleChange}
                 placeholder="Enter Username*"
-                />{formik.touched.username ? <div style={{color:"red",fontSize:"14px"}}>{formik.errors.username}</div>:null}<br/>
+                />{formik.touched.username ? <div style={{color:"red",fontSize:"14px"}}>{formik.errors.username}</div>:null}
 
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Email</label><br/>
                 <input
@@ -93,7 +95,9 @@ const Register=(props)=>{
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 placeholder="Enter Email*"
-                />{formik.touched.email ? <div style={{color:"red",fontSize:"14px"}}>{formik.errors.email}</div>:null}<br/>
+                className="form-control"
+                style={{width:"16rem"}}
+                />{formik.touched.email ? <div style={{color:"red",fontSize:"14px"}}>{formik.errors.email}</div>:null}
 
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Password</label><br/>
                 <input
@@ -102,6 +106,8 @@ const Register=(props)=>{
                 value={formik.values.password}
                 onChange={formik.handleChange}
                 placeholder="Enter password*"
+                className="form-control"
+                style={{width:"16rem"}}
                 />{formik.touched.password ?<div style={{color:"red",fontSize:"14px"}}>{formik.errors.password}</div>:null}
 
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Business Name</label><br/>
@@ -110,8 +116,10 @@ const Register=(props)=>{
                 name="businessName"
                 value={formik.values.businessName}
                 onChange={formik.handleChange}
+                className="form-control"
+                style={{width:"16rem"}}
                 placeholder="Enter Business Name"
-                /> <br/>
+                />
 
                 <label style={{fontStyle:"italic",fontWeight:"bold"}}>Address</label><br/>
                 <input style={{marginBottom:'20px'}}
@@ -119,10 +127,12 @@ const Register=(props)=>{
                 name="address"
                 value={formik.values.address}
                 onChange={formik.handleChange}
+                className="form-control"
+                style={{width:"16rem"}}
                 placeholder="Address"
                 /><br/>
 
-                <button style={{marginBottom:'20px'}}type="submit" class="btn btn-secondary">Register</button>
+                <button style={{marginBottom:'20px'}}type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
         </div>

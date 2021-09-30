@@ -16,7 +16,7 @@ const SelectCustomer=(props)=>{
     const[product,setProduct]=useState('') 
     const [productPrice,setProductPrice]=useState('')
     const [startDate, setStartDate] = useState(new Date())
-    const [count,setCount]=useState(0)
+    const [count,setCount]=useState(1)
     const [lineItems,setLineItems]=useState([])
     const [billingdata,setBillingData]=useState({})
     const [addNew, setAddNew]=useState(false)

@@ -76,7 +76,7 @@ const ViewBill=(props)=>{
                                     <thead>
                                         <tr>
                                         <th>Item</th>
-                                        <th>Price</th>
+                                        <th>Price(₹)</th>
                                         <th>Qty</th>
                                         <th>Total</th>
                                         </tr>

@@ -44,14 +44,14 @@ const CustomerForm=(props)=>{
             
             
             <div class="d-flex justify-content-center">
-            <h4 style={{marginRight:"20px"}}>Add Customer </h4><br/>
-            <form onSubmit={formik.handleSubmit}>
+            {toggle ?<h4>Update Customer</h4>:<h4 style={{marginRight:"20px"}}>Add Customer </h4>}<br/>
+            <form onSubmit={formik.handleSubmit} style={{marginBottom:"20px"}}>
                 <input style={{marginRight:'20px'}}
                 type="text"
                 name="name"
                 value={formik.values.name}
                 onChange={formik.handleChange}
-                placeholder="Customer name"
+                placeholder="Customer name"               
                 /> {formik.touched.name && formik.errors.name} 
 
                 <input style={{marginRight:'20px'}}style={{marginRight:'20px'}}
@@ -59,7 +59,7 @@ const CustomerForm=(props)=>{
                 name="mobile"
                 value={formik.values.mobile}
                 onChange={formik.handleChange}
-                placeholder="Mobile"
+                placeholder="Mobile"                
                 />{formik.touched.mobile && formik.errors.mobile}
 
                 <input style={{marginRight:'20px'}}
@@ -67,7 +67,7 @@ const CustomerForm=(props)=>{
                 name="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
-                placeholder="Email"
+                placeholder="Email"               
                 />
 
                 {toggle ? (<button type="button" class="btn btn-success" type="submit" >Update</button>

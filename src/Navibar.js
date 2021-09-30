@@ -16,7 +16,7 @@ const NaviBar=(props)=>{
     const isLogged=useSelector((state)=>{
         return state.isLoggedIn
     })
-    console.log(isLogged)
+    //console.log(isLogged)
 
     const dispatch=useDispatch()
 

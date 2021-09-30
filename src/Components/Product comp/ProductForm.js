@@ -32,7 +32,7 @@ const ProductForm=(props)=>{
 
     return(
         <div>
-            <form onSubmit={formik.handleSubmit}>
+            <form onSubmit={formik.handleSubmit} style={{marginBottom:"10px"}}>
                 <input style={{marginRight:"20px"}}
                 type="text"
                 name="name"
